@@ -13,7 +13,7 @@ public class FastIDGen {
 
     private static AtomicLong markerCounter = new AtomicLong(0L);
    
-    private long marker;
+    private final long marker;
 
     private final ThreadLocal<LongMutable> counter = ThreadLocal.withInitial(() -> new LongMutable(0));
 
